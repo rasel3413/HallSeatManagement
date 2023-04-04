@@ -1,0 +1,59 @@
+<body style="background-color: #F0FFFF">
+  {%include "base_header.html" %}
+  <br>
+  
+  <div class="container">
+    <h1>Complaints</h1>
+    <form method="GET">
+      <div class="form-group">
+        <label for="month">Select Month:</label>
+        <select class="form-control" id="month" name="month">
+          <option value="">--Select Month--</option>
+          <option value="01">January</option>
+          <option value="02">February</option>
+          <option value="03">March</option>
+          <option value="04">April</option>
+          <option value="05">May</option>
+          <option value="06">June</option>
+          <option value="07">July</option>
+          <option value="08">August</option>
+          <option value="09">September</option>
+          <option value="10">October</option>
+          <option value="11">November</option>
+          <option value="12">December</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Filter</button>
+    </form>
+    <br>
+    <div class="container">
+      <h1>Complaints</h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Room No.</th>
+            <th>Complaint</th>
+            <th>Is Solved?</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for complaint in complaints %}
+          <tr>
+            <td> {{ complaint.created_at|date:"d-m-Y" }}</td>
+            <td>{{ complaint.room_no }}</td>
+            <td>{{ complaint.complaint }}</td>
+            <td>{% if complaint.is_solved %}Solved{% else %}Unsolved{% endif %}</td>
+          </tr>
+          {% empty %}
+          <tr>
+            <td colspan="4">No complaints found</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+
+
+  </div>

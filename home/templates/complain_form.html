@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body  style="background-color: #F0FFFF">
+        {%include "base_header.html" %}
+        
+    
+<div class=" d-flex justify-content-center pt-5">
+    <form class="container" method="POST">
+        {% csrf_token %}
+        <h1 class="mb-4">Complaint Form</h1>
+
+        <div class="form-group">
+            <label for="id_complaint">Complaint</label>
+            <textarea class="form-control" id="id_complaint" name="complaint" rows="3" placeholder="Enter your complaint"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>

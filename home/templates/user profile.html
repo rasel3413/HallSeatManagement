@@ -1,0 +1,83 @@
+{%include "base_header.html" %}
+
+<body  style="background-color: #F0FFFF">
+    
+
+<div>
+    <div class="row pb-5 pt-5">
+        <div class="col-12">
+
+
+
+        </div>
+    </div>
+</div>
+<div  class=" container  page-content page-container pl-5 pt-5 "class="justify-content-center" id="page-content">
+    <div class="padding container-fluid" >
+        <div class="row justify-content-center">
+            <div class="col-xl-12 col-md-12">
+                <div class="card user-card-full "style="padding: 40px;">
+                    <div class="row m-l-0 m-r-0">
+                        <div class="col-sm-4 ">
+                            <div class="card-block text-center text-white">
+                                <div class="m-b-25">
+                                    <img src="/home{{ pic }}" class="rounded-circle p-0 "
+                                         style="height: 250px ;box-sizing : border-box;width: 250px;"
+                                         alt="User-Profile-Image">
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="card-block">
+                                <h4 class="m-b-20 p-b-5 b-b-default f-w-600">Information</h4>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600"><h6> <strong> Name:</strong></h6></p>
+                                        <h6 class="text-body f-w-400">{{ name }}</h6>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600"><h6><strong>Email:</strong></h6></p>
+                                        <h6 class="text-muted f-w-400">{{ email }}</h6>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600"><h6> <strong> Phone: </strong></h6></p>
+                                        <h6 class="text-muted f-w-400">{{ phone }}</h6>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        
+
+                                        <p class="m-b-10 f-w-600"><h6> <strong>  Room No:</strong></h6></p>
+                                        <h6 class="text-muted f-w-400">{{ room }}</h6>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                
+                                    <div class="col-sm-6">
+                                        
+
+                                        <p class="m-b-10 f-w-600"><h6> <strong> Batch No:</strong></h6></p>
+                                        <h6 class="text-muted f-w-400">{{ batch }}</h6>
+                                    </div>
+
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</body>
